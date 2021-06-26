@@ -1,8 +1,9 @@
-import { Body, Controller, Get, Post, UseGuards } from '@nestjs/common';
+import { Body, Controller, Get, Post, Res, UseGuards } from '@nestjs/common';
 import { MessageService } from './message.service';
 import { MessageDto } from './dto/message.dto';
 import { ApiOperation, ApiResponse, ApiTags } from '@nestjs/swagger';
 import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import { Response } from 'express';
 
 @ApiTags('Message Api')
 @UseGuards(JwtAuthGuard)
@@ -28,8 +29,8 @@ export class MessageController {
   @ApiOperation({ summary: 'Создать сообшение' })
   @ApiResponse({ status: 200 })
   @Post('/delete')
-  deleteMessage(@Body() messageDto: MessageDto) {
-    return this.messageService.delete(messageDto);
+  deleteMessage(@Body() messageDto: MessageDto, @Res() res: Response) {
+    return this.messageService.delete(messageDto.id, messageDto.userId, res);
   }
 
 }
