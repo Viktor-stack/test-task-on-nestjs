@@ -40,6 +40,7 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
+$ typeorm migration:run
 
 # production mode
 $ npm run start:prod
@@ -64,7 +65,7 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
+- Author - [Viktor Kuldorov](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 

@@ -1,0 +1,26 @@
+{
+  "type": "mysql",
+  "host": "localhost",
+  "port": 3306,
+  "username": "root",
+  "password": "Viktor54720zozino",
+  "database": "test_auth",
+  "logging": false,
+  "entities": [
+    "dist/**/*.entity{.ts,.js}"
+  ],
+  "synchronize": false,
+  "migrationsTableName": "migration",
+  "migrations": [
+    "dist/**/database/migration/*.js"
+  ],
+  "cli": {
+    "migrationsDir": "src/database/migration"
+  },
+  "seeds": [
+    "src/database/seeds/**/*{.ts,.js}"
+  ],
+  "factories": [
+    "src/database/factories/**/*{.ts,.js}"
+  ]
+}
