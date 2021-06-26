@@ -26,7 +26,7 @@ export class MessageController {
     return this.messageService.createMessage(messageDto);
   }
 
-  @ApiOperation({ summary: 'Создать сообшение' })
+  @ApiOperation({ summary: 'Удалить сообшение' })
   @ApiResponse({ status: 200 })
   @Post('/delete')
   deleteMessage(@Body() messageDto: MessageDto, @Res() res: Response) {

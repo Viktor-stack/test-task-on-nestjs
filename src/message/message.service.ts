@@ -33,6 +33,6 @@ export class MessageService {
   }
 
   async getAll() {
-    return await this.messageRepository.find();
+    return await this.messageRepository.find({ relations: ['user'] });
   }
 }
